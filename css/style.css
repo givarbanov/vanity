@@ -1,0 +1,159 @@
+:root {
+  --color-green-1: #1abc9c;
+  --color-green-2: #16a085;
+  --color-green-3: #2ecc71;
+  --color-green-4: #27ae60;
+  --color-blue-0: #e1eef6;
+  --color-blue-1: #3498db;
+  --color-blue-2: #2980b9;
+  --color-blue-3: #34495e;
+  --color-blue-4: #2c3e50;
+  --color-violet-1: #9b59b6;
+  --color-violet-2: #8e44ad;
+  --color-yellow-1: #ffeaa7;
+  --color-yellow-2: #f1c40f;
+  --color-orange-1: #f39c12;
+  --color-orange-2: #e67e22;
+  --color-orange-3: #d35400;
+  --color-red-1: #e74c3c;
+  --color-red-2: #c0392b;
+  --color-red-3: #cf1509;
+  --color-grey-1: #f5f6fa;
+  --color-grey-2: #bdc3c7;
+  --color-grey-3: #95a5a6;
+  --color-grey-4: #7f8c8d;
+  --color-grey-5: #2d3436;
+  --color-grey-6: #636e72;
+  --color-grey-7: #88807d;
+  --color-white: #ffffff;
+  --color-black: #000000; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #7f8c8d;
+  line-height: 1.6;
+  min-height: 100vh; }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto; }
+
+.home {
+  height: 100vh;
+  background-image: url("/img/about.jpg");
+  background-size: cover; }
+
+.nav-wrapper {
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  right: 0; }
+
+.nav {
+  font-size: 1.5rem;
+  color: var(--color-grey-5);
+  padding: .8rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-around; }
+  .nav__logo-wrapper {
+    display: flex; }
+  .nav__logo {
+    height: 12rem; }
+  .nav__menu {
+    display: flex; }
+  .nav__menu-item {
+    font-weight: 700;
+    color: inherit;
+    padding: 0 3rem;
+    text-decoration: none; }
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 4rem 0; }
+  .main > div {
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    flex: 0 0 30%;
+    box-shadow: 0.8rem 0.8rem 1.8rem var(--color-grey-5);
+    transition: all .2s; }
+    .main > div:hover {
+      filter: sepia(100%);
+      cursor: pointer;
+      transform: scale(1.03);
+      box-shadow: 1.8rem 1.8rem 2rem var(--color-grey-5); }
+  .main__hair {
+    background-image: url("/img/hair/george-bohunicky-118985-unsplash.jpg"); }
+  .main__face {
+    background-image: url("/img/face/sarah-gray-351935-unsplash.jpg"); }
+  .main__nails {
+    background-image: url("/img/nails/element5-digital-611467-unsplash.jpg"); }
+
+.footer {
+  font-size: 1.4rem;
+  height: 20rem;
+  background-color: var(--color-grey-5); }
+
+.nav-large {
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-name: anim-max-nav; }
+
+.nav-small {
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-name: anim-min-nav; }
+
+.move-nav-up {
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-name: move-nav-up; }
+
+.move-nav-down {
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-name: move-nav-down; }
+
+@keyframes anim-min-nav {
+  from {
+    height: 12rem; }
+  to {
+    height: 5rem; } }
+
+@keyframes anim-max-nav {
+  from {
+    height: 5rem; }
+  to {
+    height: 12rem; } }
+
+@keyframes move-nav-up {
+  from {
+    top: 10rem; }
+  to {
+    top: 0; } }
+
+@keyframes move-nav-down {
+  from {
+    top: 0; }
+  to {
+    top: 10rem; } }
