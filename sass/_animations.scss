@@ -1,0 +1,44 @@
+
+@keyframes anim-min-nav {
+    from {
+        height: 12rem;
+        // top: 10rem;
+    }
+
+    to {
+        height: 5rem;
+        // top: 0;
+    }
+}
+
+@keyframes anim-max-nav {
+    from {
+        height: 5rem;
+        // top: 0;
+    }
+
+    to {
+        height: 12rem;
+        // top: 10rem;
+    }
+}
+
+@keyframes move-nav-up {
+    from {
+        top: 10rem;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes move-nav-down {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 10rem;
+    }
+}

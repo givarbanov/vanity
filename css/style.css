@@ -48,6 +48,30 @@ html, body {
   line-height: 1.6;
   min-height: 100vh; }
 
+@keyframes anim-min-nav {
+  from {
+    height: 12rem; }
+  to {
+    height: 5rem; } }
+
+@keyframes anim-max-nav {
+  from {
+    height: 5rem; }
+  to {
+    height: 12rem; } }
+
+@keyframes move-nav-up {
+  from {
+    top: 10rem; }
+  to {
+    top: 0; } }
+
+@keyframes move-nav-down {
+  from {
+    top: 0; }
+  to {
+    top: 10rem; } }
+
 .container {
   max-width: 120rem;
   margin: 0 auto; }
@@ -61,7 +85,8 @@ html, body {
   position: fixed;
   top: 10rem;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 9999; }
 
 .nav {
   font-size: 1.5rem;
@@ -73,17 +98,25 @@ html, body {
   opacity: 0.7;
   display: flex;
   justify-content: space-around; }
-  .nav__logo-wrapper {
-    display: flex; }
   .nav__logo {
-    height: 12rem; }
+    height: 12rem;
+    background-image: url("/img/vanity.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 0 0 20%; }
   .nav__menu {
-    display: flex; }
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 50%;
+    align-items: flex-end; }
   .nav__menu-item {
     font-weight: 700;
     color: inherit;
-    padding: 0 3rem;
-    text-decoration: none; }
+    padding: 0 2rem;
+    text-decoration: none;
+    transition: all .4s; }
+    .nav__menu-item:hover {
+      border-bottom: 1.2rem solid var(--color-grey-2); }
 
 .main {
   display: flex;
@@ -133,27 +166,3 @@ html, body {
   animation-duration: .4s;
   animation-fill-mode: forwards;
   animation-name: move-nav-down; }
-
-@keyframes anim-min-nav {
-  from {
-    height: 12rem; }
-  to {
-    height: 5rem; } }
-
-@keyframes anim-max-nav {
-  from {
-    height: 5rem; }
-  to {
-    height: 12rem; } }
-
-@keyframes move-nav-up {
-  from {
-    top: 10rem; }
-  to {
-    top: 0; } }
-
-@keyframes move-nav-down {
-  from {
-    top: 0; }
-  to {
-    top: 10rem; } }
