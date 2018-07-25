@@ -103,11 +103,11 @@ html, body {
       transform: scale(1.03);
       box-shadow: 1.8rem 1.8rem 2rem var(--color-grey-5); }
   .main__hair {
-    background-image: url("/img/hair/george-bohunicky-118985-unsplash.jpg"); }
+    background-image: url("/img/hair-1.jpg"); }
   .main__face {
-    background-image: url("/img/face/sarah-gray-351935-unsplash.jpg"); }
+    background-image: url("/img/face-1.jpg"); }
   .main__nails {
-    background-image: url("/img/nails/element5-digital-611467-unsplash.jpg"); }
+    background-image: url("/img/nails-1.jpg"); }
 
 .footer {
   font-size: 1.4rem;
